@@ -3,7 +3,7 @@
 # ============================================================
 # 1. Setup- set directory and load necessary packages
 # ============================================================
-setwd("C:/Users/ceeja/OneDrive/Desktop/Lactobacilli_family_tree_20250505/fab_conservation_trees")
+setwd("C:/path/to/folder")
 
 library(ggplot2)
 library(gggenes)
@@ -12,7 +12,7 @@ library(dplyr)
 library(readr)
 
 # ============================================================
-# 2. Read in the GFF file downloaded from geneious
+# 2. Read in the GFF file
 # ============================================================
 gff <- import("36_fab_operons.gff")
 
@@ -53,7 +53,7 @@ genes_df$molecule <- genes_df$molecule |>
   gsub("_", " ", x = _)
 
 # ============================================================
-# 5. Read CURATED mapping table 
+# 5. Mapping table 
 # ============================================================
 mapping_final <- read_tsv(
   "fab_gene_annotation_mapping_suggested.tsv",
